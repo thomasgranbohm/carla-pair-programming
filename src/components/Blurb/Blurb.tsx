@@ -17,7 +17,12 @@ const Blurb = ({
 	const onClick = () => router.push(`/cats/${id}`);
 
 	return (
-		<div className={classes["container"]} onClick={onClick}>
+		<div
+			className={classes["container"]}
+			onClick={onClick}
+			tabIndex={0}
+			onKeyPress={(e) => e.key === "Enter" && onClick()}
+		>
 			<img className={classes["image"]} src={image.url} alt={name} />
 			<h2 className={classes["name"]}>{name}</h2>
 			<p className={classes["description"]}>{description}</p>
