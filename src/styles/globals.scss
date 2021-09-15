@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+	max-width: calc(960px + 2 * #{$gutter});
+	width: 100%;
+	margin: $gutter auto;
+	padding: 0 $gutter;
+}

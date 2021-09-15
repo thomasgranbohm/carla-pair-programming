@@ -1,0 +1,46 @@
+@import "styles/variables";
+
+.container {
+	width: 18rem;
+	padding: $gutter;
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 0.25rem;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+
+	// display: grid;
+	// grid-template-rows: repeat(4, auto);
+	// grid-template-columns: 1fr 1fr;
+	// grid-template-areas: "image image" "name name" "description description" "life_span wikipedia";
+
+	gap: $gutter;
+
+	transition: box-shadow 0.2s;
+
+	&:hover {
+		box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.5);
+		cursor: pointer;
+	}
+}
+
+.image {
+	margin: -#{$gutter} -#{$gutter} 0 -#{$gutter};
+	width: calc(100% + (2 * #{$gutter}));
+}
+
+.name,
+.description {
+	color: black;
+}
+
+.bottom_information {
+	display: flex;
+	justify-content: space-between;
+}
+
+.life_span {
+	color: gray;
+}
