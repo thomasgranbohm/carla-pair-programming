@@ -7,7 +7,7 @@ export const getStaticProps = async () => {
 
 	return {
 		props: {
-			cats: cats.filter((cat) => !!cat.image),
+			cats: cats.filter((cat) => cat.image && cat.image.url),
 		},
 		revalidate: 60,
 	};

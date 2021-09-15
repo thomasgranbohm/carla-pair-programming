@@ -1,6 +1,5 @@
 import Blurb from "components/Blurb";
 import { BaseCat } from "lib/types";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import classes from "./BlurbListing.module.scss";
 
@@ -38,11 +37,7 @@ const BlurbListing = ({ items }: BlurbListingProps) => {
 			/>
 			<div className={classes["items"]}>
 				{filteredItems.map((cat) => (
-					<Link href={`/cats/${cat.id}`} key={`item-${cat.id}`}>
-						<a className={classes["link"]}>
-							<Blurb {...cat} />
-						</a>
-					</Link>
+					<Blurb {...cat} key={`item-${cat.id}`} />
 				))}
 			</div>
 		</div>
