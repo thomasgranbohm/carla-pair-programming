@@ -38,9 +38,9 @@ const BlurbListing = ({ items }: BlurbListingProps) => {
 			/>
 			<div className={classes["items"]}>
 				{filteredItems.map((cat) => (
-					<Link href={`/cat/${cat.id}`}>
+					<Link href={`/cats/${cat.id}`} key={`item-${cat.id}`}>
 						<a className={classes["link"]}>
-							<Blurb {...cat} key={`item-${cat.id}`} />
+							<Blurb {...cat} />
 						</a>
 					</Link>
 				))}
